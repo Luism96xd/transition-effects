@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition effects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <video src="clip.mp4" type="video/mp4" autoplay muted></video>
+        <video src="transition1.mp4" id="ink" type="video/mp4" autoplay muted></video>
+    </div>
+    <div>
+        <button id="1" onclick="overlay.setAttribute('src','transition1.mp4')">Transition 1</button>
+        <button id="2" onclick="overlay.setAttribute('src','transition2.mp4')">Transition 2</button>
+        <button id="3" onclick="overlay.setAttribute('src','transition3.mp4')">Transition 3</button>
+        <button id="4" onclick="overlay.setAttribute('src','transition4.mp4'); overlay.style.filter = 'invert(0)'">Transition 4</button>
+        <button id="5" onclick="overlay.setAttribute('src','ink.mp4'); overlay.style.filter = 'invert(0) grayscale(100)  brightness(2)'; overlay.playbackRate = 2.0;">Ink</button>
+        <button id="6" onclick="overlay.setAttribute('src','grunge1.mp4'); overlay.style.filter = 'invert(100)'">Grunge 1</button>
+        <button id="7" onclick="overlay.setAttribute('src','grunge2.mp4'); overlay.style.filter = 'invert(100)'">Grunge 2</button>
+    </div>
+    <script>
+        var overlay = document.getElementById("ink");
+    </script>
+</body>
+</html>
